@@ -1,17 +1,10 @@
-# Imagen base ligera con Node.js
 FROM node:18-alpine
-
-# Carpeta de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copiamos los archivos de la app
-COPY . .
-
-# Instalamos las dependencias
+# Copiar los archivos del frontend (ajusta si tu carpeta se llama distinto)
+COPY guestbook-frontend/package*.json ./
 RUN npm install
 
-# Exponemos el puerto de la app
+COPY guestbook-frontend/ .
 EXPOSE 3000
-
-# Comando de arranque
 CMD ["npm", "start"]
