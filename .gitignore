@@ -1,0 +1,6 @@
+# Ignorar archivos y carpetas innecesarias
+.terraform/
+*.exe
+*.zip
+*.plan
+terraform.tfstate*
