@@ -7,8 +7,8 @@ on:
 
 env:
   AZURE_CONTAINER_REGISTRY: guestbookacr2025br
-  AKS_RESOURCE_GROUP: yourResourceGroupName
-  AKS_CLUSTER_NAME: yourAKSClusterName
+  AKS_RESOURCE_GROUP: rg-segundo-parcial
+  AKS_CLUSTER_NAME: aks-segundo-parcial
   IMAGE_NAME: guestbook-frontend
 
 jobs:
