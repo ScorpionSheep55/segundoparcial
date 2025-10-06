@@ -1,10 +1,20 @@
+# Usa una imagen ligera de Node
 FROM node:18-alpine
+
+# Crea el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copiar los archivos del frontend (ajusta si tu carpeta se llama distinto)
-COPY guestbook-frontend/package*.json ./
+# Copia los archivos de dependencias
+COPY package*.json ./
+
+# Instala dependencias
 RUN npm install
 
-COPY guestbook-frontend/ .
+# Copia el resto del código de la app
+COPY . .
+
+# Expone el puerto
 EXPOSE 3000
+
+# Comando de inicio
 CMD ["npm", "start"]
